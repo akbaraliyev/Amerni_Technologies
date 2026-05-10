@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Amerni Technologies</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="light-header">
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <span><i class="fa-solid fa-envelope"></i> info@amernitech.com</span>
+          <span
+            ><i class="fa-regular fa-clock"></i> Mon - Fri; 9.00 am - 6.00
+            pm</span
+          >
+        </div>
+        <div class="top-bar-right">
+          <a href="https://www.facebook.com/AmerniTech" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="https://x.com/AmerniTech" target="_blank">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+
+      <nav class="navbar">
+        <div class="logo">
+          <img
+            src="assets/Amerni_Tech_logo.png"
+            alt="Amerni Technologies Logo"
+          />
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="products.html">Our Products</a></li>
+          <li><a href="services.html">Our services</a></li>
+          <li><a href="contact.html" class="active-btn">Contact Us</a></li>
+          <li>
+            <a
+              href="https://helpdesk.orbits365.com/hd/"
+              target="_blank"
+              class="sign-in"
+              >Sign in</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="contact-hero">
+      <div class="contact-hero-content">
+        <h1>Contact Us</h1>
+      </div>
+    </section>
+
+    <section class="contact-content-section">
+      <div class="container">
+        <div class="get-in-touch-box">
+          <div class="contact-info">
+            <h2>Get In Touch</h2>
+            <h3>We'd like to hear from you!</h3>
+            <p>
+              If you have any inquiries or just want to say hi, please use the
+              contact form!
+            </p>
+
+            <div class="contact-info-list">
+              <div class="info-item">
+                <i class="fa-solid fa-phone-volume"></i>
+                <div>
+                  <a href="tel:+97143399115" class="info-link"
+                    >+971-4-3399115</a
+                  >
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="fa-regular fa-envelope"></i>
+                <div>
+                  <a href="mailto:info@amernitech.com" class="info-link"
+                    >info@amernitech.com</a
+                  >
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <h4>Head Office</h4>
+                  <p>
+                    Al Andalus Building - M02, Next<br />Abu Hail Center (Al
+                    Kabayel Home<br />Same Building) - Deira, Dubai,<br />United
+                    Arab Emirates.
+                  </p>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="fa-solid fa-location-dot" style="opacity: 0"></i>
+                <div>
+                  <h4>Branch Office</h4>
+                  <p>
+                    Shuveccha Bhaban, 5A, 60/2,<br />Taltola, Akur Takur Para,
+                    Tangail,<br />Bangladesh
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-container">
+            <form id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="cf-name">Your Name</label>
+                  <input type="text" id="cf-name" name="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="cf-phone">Your Number</label>
+                  <input type="text" id="cf-phone" name="phone" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="cf-email">Your Email</label>
+                  <input type="email" id="cf-email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="cf-industry">Industry</label>
+                  <select id="cf-industry" name="industry">
+                    <option value="" disabled selected></option>
+                    <option value="Taxi & Fleet Operations">Taxi & Fleet Operations</option>
+                    <option value="Car Rental & Leasing">Car Rental & Leasing</option>
+                    <option value="Limousine & Mobility Services">
+                      Limousine & Mobility Services
+                    </option>
+                    <option value="Driving Institute Management">
+                      Driving Institute Management
+                    </option>
+                    <option value="Port Operations">Port Operations</option>
+                    <option value="Manufacturing & Trading Operations">
+                      Manufacturing & Trading Operations
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="cf-message">Write a Message</label>
+                <textarea id="cf-message" name="message" required></textarea>
+              </div>
+
+              <div class="submit-row">
+                <button type="submit" class="submit-btn">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.7918105156828!2d55.34452597622925!3d25.277587928438315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5d6cb1d7311b%3A0xb66f5cddc7f2d43b!2sAmerni%20Technologies!5e0!3m2!1sen!2saz!4v1778415816852!5m2!1sen!2saz"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-col brand-col">
+          <div class="footer-logo">
+            <img src="assets/Amerni_Tech_logo.png" alt="Amerni Technologies Logo" />
+          </div>
+          <p>Driven by innovation,<br />powered by technology.</p>
+          <br />
+          <p>Building smarter digital<br />solutions for tomorrow.</p>
+          <div class="footer-socials">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col links-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="products.html">Our Products</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li>
+              <a href="contact.html" class="active-footer-link">Contact Us</a>
+            </li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col contact-col">
+          <h4>Contact</h4>
+          <p>
+            Phone:
+            <a href="tel:+97143399115" class="footer-contact-link"
+              >+971-4-3399115</a
+            >
+          </p>
+          <br />
+          <p>
+            Email:
+            <a href="mailto:info@amernitech.com" class="footer-contact-link"
+              >info@amernitech.com</a
+            >
+          </p>
+        </div>
+        <div class="footer-col location-col">
+          <h4>Location</h4>
+          <p>
+            Head Office<br />Al Andalus Building - M02, Next Abu Hail<br />Center
+            (Al Kabayel Home Same Building) -<br />Deira, Dubai, United Arab
+            Emirates.
+          </p>
+          <br />
+          <p>
+            Branch Office<br />Shuveccha Bhaban, 5A, 60/2, Taltola, Akur<br />Takur
+            Para, Tangail, Bangladesh
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
