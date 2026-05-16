@@ -145,6 +145,56 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(slideTestimonials, 4000);
     }
 
+    // Offering Carousel (What We're Offering)
+    const offeringTrack = document.querySelector('.offering-track');
+    const offerCardsCarousel = document.querySelectorAll('.offering-track .offer-card');
+    const offeringPrev = document.querySelector('.offering-prev');
+    const offeringNext = document.querySelector('.offering-next');
+
+    if (offeringTrack && offerCardsCarousel.length > 0 && offeringPrev && offeringNext) {
+        let currentOfferIndex = 0;
+
+        function getOfferCardsPerView() {
+            if (window.innerWidth >= 1001) return 5;
+            if (window.innerWidth >= 768) return 3;
+            if (window.innerWidth >= 600) return 2;
+            return 1;
+        }
+
+        function updateOfferingCarousel() {
+            const cardsPerView = getOfferCardsPerView();
+            const maxIndex = Math.max(0, offerCardsCarousel.length - cardsPerView);
+            if (currentOfferIndex > maxIndex) currentOfferIndex = maxIndex;
+            if (currentOfferIndex < 0) currentOfferIndex = 0;
+
+            const cardWidth = offerCardsCarousel[0].offsetWidth + 15; // 15 is gap
+            offeringTrack.style.transform = `translateX(-${currentOfferIndex * cardWidth}px)`;
+
+            offeringPrev.disabled = currentOfferIndex === 0;
+            offeringNext.disabled = currentOfferIndex >= maxIndex;
+        }
+
+        offeringNext.addEventListener('click', () => {
+            const cardsPerView = getOfferCardsPerView();
+            const maxIndex = Math.max(0, offerCardsCarousel.length - cardsPerView);
+            if (currentOfferIndex < maxIndex) {
+                currentOfferIndex++;
+                updateOfferingCarousel();
+            }
+        });
+
+        offeringPrev.addEventListener('click', () => {
+            if (currentOfferIndex > 0) {
+                currentOfferIndex--;
+                updateOfferingCarousel();
+            }
+        });
+
+        window.addEventListener('resize', updateOfferingCarousel);
+        // Initial setup (slight delay to ensure layout is ready)
+        requestAnimationFrame(updateOfferingCarousel);
+    }
+
     // Services & Products Scroll-In Animation
     const animatedRows = document.querySelectorAll('.service-row, .product-row');
     if (animatedRows.length > 0 && 'IntersectionObserver' in window) {
