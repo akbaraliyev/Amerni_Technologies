@@ -195,7 +195,7 @@ header.scrolled {
 }
 
 .section-subtitle {
-  font-size: 16px;
+  font-size: 26px;
   color: #666;
   margin-bottom: 10px;
 }
@@ -320,6 +320,8 @@ header.scrolled {
   min-height: 220px;
   display: flex;
   flex-direction: column;
+  text-decoration: none;
+  color: inherit;
 }
 
 .solution-card h3 {
@@ -467,9 +469,79 @@ header.scrolled {
   margin-top: 50px;
 }
 
+/* Offering Carousel */
+.offering-carousel {
+  position: relative;
+  margin-top: 50px;
+  padding: 0 85px;
+}
+
+.offering-track-wrapper {
+  overflow: hidden;
+}
+
+.offering-track {
+  display: flex;
+  gap: 15px;
+  transition: transform 0.5s ease;
+  align-items: stretch;
+  padding-top: 35px;
+}
+
+.offering-track .offer-card {
+  flex: 0 0 calc((100% - 60px) / 5);
+  min-width: 0;
+}
+
+.offering-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  background-color: #ffffff;
+  border: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  color: #11429b;
+  font-size: 16px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.offering-arrow:hover {
+  background-color: #11429b;
+  color: #ffffff;
+}
+
+.offering-arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.offering-arrow:disabled:hover {
+  background-color: #ffffff;
+  color: #11429b;
+}
+
+.offering-prev {
+  left: 10px;
+}
+
+.offering-next {
+  right: 10px;
+}
+
 .offer-card {
   background-color: #1a295c;
-  padding: 0 15px 90px 15px;
+  padding: 0 15px 50px 15px;
   text-align: center;
   border-radius: 4px;
   position: relative;
@@ -478,6 +550,9 @@ header.scrolled {
   transition:
     background-color 0.4s ease,
     transform 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .offer-card p {
@@ -802,8 +877,6 @@ header.scrolled {
 .accordion-item.active .accordion-body {
   max-height: 200px;
 }
-
-
 
 .testimonial-slider-container {
   width: 100%;
@@ -1362,14 +1435,11 @@ header.scrolled {
   padding: 0 10px;
 }
 
-
-
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-
 
 /* ORBITS 365 Section */
 .orbits-section {
@@ -1942,6 +2012,9 @@ body.menu-open {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 50px;
   }
+  .offering-track .offer-card {
+    flex: 0 0 calc((100% - 30px) / 3);
+  }
   .faq-section {
     flex-direction: column;
   }
@@ -2093,6 +2166,12 @@ body.menu-open {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 50px;
   }
+  .offering-track .offer-card {
+    flex: 0 0 calc((100% - 15px) / 2);
+  }
+  .offering-carousel {
+    padding: 0 65px;
+  }
   .customers-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
@@ -2225,6 +2304,17 @@ body.menu-open {
   }
   .offering-grid {
     grid-template-columns: 1fr;
+  }
+  .offering-track .offer-card {
+    flex: 0 0 100%;
+  }
+  .offering-carousel {
+    padding: 0 50px;
+  }
+  .offering-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 14px;
   }
   .customers-grid {
     grid-template-columns: repeat(2, 1fr);
